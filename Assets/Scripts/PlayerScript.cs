@@ -15,6 +15,13 @@ public class PlayerController : MonoBehaviour
 
     public TMP_Text scoreText;
     public int score = 0;
+    public int numOfFlower1 = 0;
+    public int numOfFlower2 = 0;
+
+    public bool isPlanted = false;
+    public bool canPlant = false;
+
+    public PlantingScript plantingScript;
 
     public GameObject deathPanel;
 
@@ -41,9 +48,20 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        Debug.Log(ctx.ReadValue<Vector2>());
+       // Debug.Log(ctx.ReadValue<Vector2>());
         moveInputX = ctx.ReadValue<Vector2>().x;
         moveInputY = ctx.ReadValue<Vector2>().y;
+    }
+
+    public void plant(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && canPlant==true)
+        {
+            Debug.Log("Planting");
+            isPlanted = true;
+
+            //plantingScript.Planted();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,14 +69,17 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("GoodFlower"))
         {
             other.gameObject.SetActive(false);
-            score = score + 5;
-            scoreText.text = "Money: $" + score.ToString();
+            numOfFlower1 = numOfFlower1 + 1;
+            //score = score + 5;
+            //scoreText.text = "Money: $" + score.ToString();
         }
+
         if (other.gameObject.CompareTag("GoodFlower2"))
         {
             other.gameObject.SetActive(false);
-            score = score + 10;
-            scoreText.text = "Money: $" + score.ToString();
+            numOfFlower2 = numOfFlower2 + 1;
+            // score = score + 10;
+            //scoreText.text = "Money: $" + score.ToString();
         }
         else if (other.gameObject.CompareTag("BadFlower"))
         {
@@ -66,5 +87,23 @@ public class PlayerController : MonoBehaviour
             Debug.Log("You lose!");
             deathPanel.SetActive(true);
         }
+
+        if (other.gameObject.CompareTag("Planter"))
+        {
+            canPlant = true;
+        }
+        else
+        {
+            canPlant = false;
+        }
+
+        if (other.gameObject.CompareTag("Money"))
+        {
+
+            score = score + (numOfFlower1 * 5) + (numOfFlower2 * 10);
+            scoreText.text = "Money: $" + score.ToString();
+        }
     }
+
+    
 }
