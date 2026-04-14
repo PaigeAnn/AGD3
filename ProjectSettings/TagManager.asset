@@ -12,6 +12,7 @@ TagManager:
   - Plant1
   - Plant2
   - Plant 3
+  - Plant3
   layers:
   - Default
   - TransparentFX

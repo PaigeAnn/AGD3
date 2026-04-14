@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5651584962651711352}
   - component: {fileID: 8308020111591000812}
   - component: {fileID: 7995628527178162527}
+  - component: {fileID: -7734740694048983435}
   m_Layer: 0
   m_Name: Plant1
   m_TagString: Plant1
@@ -138,3 +139,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.25806618, y: 0.2363143}
   m_EdgeRadius: 0
+--- !u!114 &-7734740694048983435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192447784087175936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac3af32f24d114b9638ac0f354f577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoisonFlower
+  playerScript: {fileID: 0}
+  isPoisoned: 0

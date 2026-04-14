@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
 
 
+
     Rigidbody2D rb2d;
 
 
@@ -109,6 +110,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Planter"))
         {
             canPlant = true;
+            //plantingScript.Planted();
         }
         else
         {
