@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public int score = 0;
     public int numOfFlower1 = 0;
     public int numOfFlower2 = 0;
+    public int numOfPlant1 = 0;
+    public int numOfPlant2 = 0;
+    public int numOfPlant3 = 0;
 
     public bool isPlanted = false;
     public bool canPlant = false;
@@ -81,6 +84,21 @@ public class PlayerController : MonoBehaviour
             // score = score + 10;
             //scoreText.text = "Money: $" + score.ToString();
         }
+        if (other.gameObject.CompareTag("Plant1"))
+        {
+            other.gameObject.SetActive(false);
+            numOfFlower2 = numOfPlant1 + 1;
+        }
+        if (other.gameObject.CompareTag("Plant2"))
+        {
+            other.gameObject.SetActive(false);
+            numOfPlant2 = numOfPlant2 + 1;
+        }
+        if (other.gameObject.CompareTag("Plant3"))
+        {
+            other.gameObject.SetActive(false);
+            numOfPlant3 = numOfPlant3 + 1;
+        }
         else if (other.gameObject.CompareTag("BadFlower"))
         {
             //die
@@ -100,7 +118,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Money"))
         {
 
-            score = score + (numOfFlower1 * 5) + (numOfFlower2 * 10);
+            score = score + (numOfFlower1 * 5) + (numOfFlower2 * 10) + (numOfPlant1 * 2) + (numOfPlant2 * 2) + (numOfPlant3);
             scoreText.text = "Money: $" + score.ToString();
         }
     }

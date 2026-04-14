@@ -26,15 +26,16 @@ public class PlantingScript : MonoBehaviour
         if (playerScript.isPlanted == true && playerScript.canPlant == true)
         {
             Debug.Log("Planted");
-            StartCoroutine(time());
+          //  StartCoroutine(time());
 
-            if (coroutineDone == true)
-            {
+        //    if (coroutineDone == true)
+         //   {
+                Debug.Log("Plant Instantiated");
                 Instantiate(plant, transform.position, Quaternion.identity);
 
                 playerScript.isPlanted = false;
                 playerScript.canPlant = false;
-            }
+           // }
         }
         coroutineDone = false;
     }

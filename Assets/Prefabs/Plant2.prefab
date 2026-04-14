@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8308020111591000812}
   - component: {fileID: 7995628527178162527}
   m_Layer: 0
-  m_Name: GoodFlower2
-  m_TagString: GoodFlower2
+  m_Name: Plant2
+  m_TagString: Plant2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -24.55816, y: 5.04108, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.0673, y: 2.0673, z: 2.0673}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1122005770, guid: 38e1aac53e3ba4a4e8d3f8abeb2b6497, type: 3}
+  m_Sprite: {fileID: 210193317, guid: 38e1aac53e3ba4a4e8d3f8abeb2b6497, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,15 +126,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.028165817, y: 0.0080477}
+  m_Offset: {x: 0.013730124, y: -0.003702689}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.54296875, y: 0.4921875}
+    oldSize: {x: 0.28515625, y: 0.296875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.412529, y: 0.42057538}
+  m_Size: {x: 0.21737516, y: 0.25036165}
   m_EdgeRadius: 0

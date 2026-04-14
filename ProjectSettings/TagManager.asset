@@ -9,6 +9,9 @@ TagManager:
   - BadFlower
   - Money
   - Planter
+  - Plant1
+  - Plant2
+  - Plant 3
   layers:
   - Default
   - TransparentFX
